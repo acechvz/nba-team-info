@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Source+Sans+Pro:wght@300;400&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: rgb(46, 16, 68);
+  min-height: 100vh;
+  font-family: "Lato", sans-serif;
+  &::after {
+    content: "";
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: linear-gradient(
+        350deg,
+        rgba(46, 16, 68, 1) 0%,
+        rgba(107, 42, 185, 1) 100%
+      )
+      no-repeat;
+    font-size: 14px;
+    font-weight: normal;
+  }
+}
+
+.App {
+  padding: 60px 0;
+}
+
+.nba-logo {
+  position: fixed;
+  height: 85%;
+  mix-blend-mode: multiply;
+  opacity: 0.15;
+  right: 0;
+  bottom: 0;
+  transform: translate(35%, 15%);
+  z-index: 0;
+  max-width: 50%;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top left;
+  }
+}
+
+.head-text {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 400;
+  opacity: 0.85;
+  font-size: 1.5em;
+  font-family: "Source Sans Pro", sans-serif;
+  @media (max-width: 767px) {
+    text-align: center;
+  }
+}
